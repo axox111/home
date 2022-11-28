@@ -1,17 +1,17 @@
 #279Даны действительные числа а1, ..., аn, b1, ..., bn.
 #вычислить (a1 + bn) * (a2 - bn-1) * ... * (an + b1)
-n = 10
-al = []
-bl = []
-s = 0
-ss = 0
+import random
+
+a = random.sample(range(1, 100), 5)
+b = random.sample(range(1, 100), 5)
+n = 5
+i = 0
 res = 1
-for i in range(1, n + 1):
-    al.append(i)
-    bl.append(i)
-bl.reverse()
-while s < n:
-    ss = al[s] + bl[s]
-    res *= ss
-    s +=1
+b.reverse()
+while i < n:
+    sum = a[i] + b[i]
+    res *= sum
+    i +=1
+print(a)
+print(b)
 print(res)
