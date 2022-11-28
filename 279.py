@@ -2,13 +2,14 @@
 #вычислить (a1 + bn) * (a2 - bn-1) * ... * (an + b1)
 import random
 
-a = random.sample(range(1, 100), 5)
-b = random.sample(range(1, 100), 5)
-n = 5
+var = int(input("введите количество чисел: "))
+max_range = 100
+a = random.sample(range(1, max_range), var)
+b = random.sample(range(1, max_range), var)
 i = 0
 res = 1
 b.reverse()
-while i < n:
+while i < var:
     sum = a[i] + b[i]
     res *= sum
     i +=1
