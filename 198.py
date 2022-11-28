@@ -10,4 +10,4 @@ for i in range(1, n + 1):
     else:
         x = i / 3
     res += x
-print(res)1
+print(res)
