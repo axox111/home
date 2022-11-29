@@ -4,7 +4,7 @@
 #иначе bi заменить нулем (i = 1, 25)
 import random
 
-i = 5
+i = 25
 min_range = -100
 max_range = 100
 a = random.sample(range(min_range, max_range + 1), i)
