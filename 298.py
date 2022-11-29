@@ -11,11 +11,9 @@ a = random.sample(range(min_range, max_range + 1), i)
 b = random.sample(range(min_range, max_range + 1), i)
 print(a)
 print(b)
-j = 0
-for value in a:
-    if value <= 0:
-        b[j] = b[j] * 10
+for i in range(0, len(a)):
+    if a[i] <= 0:
+        b[i] = b[i] * 10
     else:
-        b[j] = b[j] * 0
-    j += 1
+        b[i] = b[i] * 0
 print(b)
