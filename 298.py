@@ -15,8 +15,7 @@ j = 0
 for value in a:
     if value <= 0:
         b[j] = b[j] * 10
-        j += 1
     else:
         b[j] = b[j] * 0
-        j += 1
+    j += 1
 print(b)
