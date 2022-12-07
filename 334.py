@@ -13,9 +13,10 @@ print(f"Результат этой агонии - {round(res, 2)}")
 i = 1
 imax = 100
 j = 1
-imax = i
+jmax = i
 res = 0
 for k in range(i, imax + 1):
-    for n in range(j, jmax + 1):
+    jmax += i
+    for n in range(j, jmax):
         res += 1 / (2 * n + k)
 print(f"Результат этой агонии - {round(res, 2)}")
