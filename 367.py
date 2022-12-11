@@ -4,13 +4,11 @@ var1 = 2#int(input("Переменная 1:"))
 var2 = 3#int(input("Переменная 2:"))
 var3 = 4#int(input("Переменная 3:"))
 varList = [var1, var2, var3]
-matrix = [] #1
 arr = []
 size = 3
 for i in range(size):
-    matrix = [] #2
+    matrix = []
     for j in range(size):
         matrix.append(varList[i] - 3 * varList[j])
     arr.insert(i, matrix)
-    matrix = [] #3
 print(arr)
