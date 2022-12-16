@@ -1,7 +1,7 @@
 import random
 import time
 
-n = int(input('Введите желаемое число списка:'))
+n = 5#int(input('Введите желаемое число списка:'))
 a_min = 1
 a_max = 10000
 start = time.time()
@@ -14,7 +14,8 @@ for j in range(len(numbers)):
         if numbers[counter] > numbers[counter + 1]:
             numbers[counter], numbers[counter + 1] = numbers[counter + 1], numbers[counter]
         counter +=1
-lst_of_numbers = str(numbers)        
+for i in numbers:
+    lst_of_numbers += str(i) + ' '
 file_bbl.write(lst_of_numbers)
 file_bbl.close()
 end = time.time()

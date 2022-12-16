@@ -14,7 +14,8 @@ for j in range(1, len(numbers)):
             numbers[i], numbers[i - 1] = numbers[i - 1], numbers[i]
         else:
             break
-temp_val = str(numbers)
+for i in numbers:
+    temp_val += str(i) + ' '
 file_paste.write(temp_val)
 file_paste.close()
 end = time.time() - start
