@@ -20,4 +20,4 @@ file_bbl.write(lst_of_numbers)
 file_bbl.close()
 end = time.time()
 print(f"{round(end - start, 2)} сек.")
-#O(N) + #O(N ** 2) - 1
+#O(N) + O(N ** 2) - 1 + O(N)

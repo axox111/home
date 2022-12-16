@@ -20,4 +20,4 @@ file_paste.write(temp_val)
 file_paste.close()
 end = time.time() - start
 print(f"а этот код занял {round(end, 2)} секунд.")
-#O(N **2)
+#O(N) + O(N ** 2) + O(N)
