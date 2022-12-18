@@ -8,9 +8,15 @@ file_bbl = open('sort by BUUBLES.txt', 'w')
 start = time.time()
 for j in range(len(numbers)): 
     for i in range(len(numbers) - 1- j): 
+        issorted = True
         if numbers[i] > numbers[i + 1]:
             numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]   
-end = time.time()
+# =============================================================================
+#             issorted = False
+#     if issorted:
+#         break
+# end = time.time()
+# =============================================================================
 for i in numbers:
     lst_of_numbers += str(i) + ' '
 file_bbl.write(lst_of_numbers)
