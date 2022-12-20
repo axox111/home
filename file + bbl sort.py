@@ -15,8 +15,8 @@ for j in range(len(numbers)):
 #             issorted = False
 #     if issorted:
 #         break
-# end = time.time()
 # =============================================================================
+end = time.time()
 for i in numbers:
     lst_of_numbers += str(i) + ' '
 file_bbl.write(lst_of_numbers)
