@@ -23,7 +23,7 @@ base_file.close()
 start = time.time()
 sorted = quick_sort(convert_to_list)
 end = time.time() - start
-print(f"Сортировка заверешена за {end} сек.")
+print(f"Сортировка заверешена за {round(end, 2)} сек.")
 sorted_file = open('sorted by quick sort.txt', 'w')
 value = ''
 for i in sorted:

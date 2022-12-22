@@ -18,4 +18,4 @@ for i in numbers:
 file_paste.write(temp_val)
 file_paste.close()
 print(f"А этот код занял {round(end, 2)} секунд.")
-print(f"Сложность сортировки - O({len(numbers) ** 2}))")
+print(f"Сложность сортировки - O({round(len(numbers) ** 2, 2)}))")

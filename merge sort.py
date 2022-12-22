@@ -1,3 +1,6 @@
+import time
+import math
+
 def merge_sort(x):
     if len(x) == 1:
         return x
@@ -23,7 +26,15 @@ def merge_sorting(x, y):
         final += y[j:]
     return final
             
-a = [10, 7, 9, 4, 6, 3, 1, 2]
-print(a)
-b = merge_sort(a)
-print(b)
+base_file = open('generated list.txt', 'r')
+numbers = [int(i) for i in str(base_file.read()).split()]
+base_file.close()
+start = time.time()
+sorting = merge_sort(numbers)
+end = time.time() - start
+sorted_file = open('sorted by merge.txt', 'w')
+for i in sorting:
+    sorted_file.write(str(i) + ' ')
+sorted_file.close()
+print(f"Сортировка слиянием заняла {round(end, 2)} сек")
+print(f"сложность алгоритма O({round(math.log2(len(numbers)), 2)})")
