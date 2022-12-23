@@ -37,4 +37,4 @@ for i in sorting:
     sorted_file.write(str(i) + ' ')
 sorted_file.close()
 print(f"Сортировка слиянием заняла {round(end, 2)} сек")
-print(f"сложность алгоритма O({round(math.log2(len(numbers)), 2)})")
+print(f"сложность алгоритма O({round(len(numbers)*math.log2(len(numbers)), 2)})")
