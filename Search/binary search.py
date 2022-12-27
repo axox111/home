@@ -8,13 +8,11 @@ def binary_search(lst, elem, start, end):
     if lst[mid] == elem:
         return print(f"Индекс искомого элемента {pos}")
     if elem < lst[mid]:
-        temp_list = lst[:mid]
-        return binary_search(temp_list, elem, start, pos - 1)
+        return binary_search(lst[:mid], elem, start, pos - 1)
     else:
-        temp_list = lst[mid:]
-        return binary_search(temp_list, elem, pos, end)
+        return binary_search(lst[mid:], elem, pos, end)
 
-base_file = open('sorted by quick sort.txt', 'r')
+base_file = open('quick sort file.txt', 'r')
 numbers = [int(i) for i in str(base_file.read()).split()]
 base_file.close()
 # =============================================================================

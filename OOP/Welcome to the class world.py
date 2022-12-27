@@ -1,3 +1,6 @@
+import random 
+import math
+
 class Phone:
     def __init__(self, number, model, weight):
         self.number = number
@@ -13,13 +16,61 @@ class Phone:
     def sendMessage(self,spamContacts):
         print(spamContacts)
         
+class Person1:
+    def __init__(self, fullName, age):
+        self.fullName = fullName
+        self.age = age
         
-samsung = Phone(88005553535, 'Samsung', 412)
-apple = Phone(77009379992, 'Apple', 200)
-nokia = Phone(797822211166, 'Nokia', 600)
-print(samsung.number, samsung.model, samsung.weight)
-print(apple.number, apple.model, apple.weight)
-print(nokia.number, nokia.model, nokia.weight)
-samsung.getNumber
-samsung.receiveCall('Кельфаен', '%anyGeorgiaNumber%')
-samsung.sendMessage('8800111111, 6600656666, 770055555')
+    def talk1(self):
+        print(f"{self.fullName} говорит")
+        
+class Person2:
+    def __init__(self):
+        pass
+    
+    def talk2(self):
+        print(f"{self.fullName} говорит")
+ 
+class Matrix:
+    def __init__(self, arr, size):
+        self.arr = arr
+        self.size = size
+        
+    def __getitem__(self, index):
+        return self.Matrix[index]
+    
+    def sumMatrix(self, otherArr):
+        if isinstance(otherArr, Matrix):
+             res = []
+             for i in range(len(self.arr)):
+                 temp = []
+                 for j in range(len(self.arr)):
+                    value = self[i][j] + otherArr[i][j]
+                    temp.append(value)
+                 res.append(temp) 
+        return res
+        
+arr1 = [[93, 85, 96], [46, 1, 79], [35, 16, 85]]
+arr2 = [[33, 20, 80], [75, 76, 46], [56, 44, 4]]
+
+a = Matrix(arr1, 3)
+b = Matrix(arr2, 3)
+print(a[2])
+
+
+# samsung = Phone(88005553535, 'Samsung', 412)
+# apple = Phone(77009379992, 'Apple', 200)
+# nokia = Phone(797822211166, 'Nokia', 600)
+# print(samsung.number, samsung.model, samsung.weight)
+# print(apple.number, apple.model, apple.weight)
+# print(nokia.number, nokia.model, nokia.weight)
+# samsung.getNumber
+# samsung.receiveCall('Кельфаен', '%anyGeorgiaNumber%')
+# samsung.sendMessage('8800111111, 6600656666, 770055555')
+
+# oleg = Person1('Олег', 17)
+# gleb = Person2()
+# gleb.fullName = 'Глеб'
+# gleb.age = '19' 
+# oleg.talk1()
+# gleb.talk2()
