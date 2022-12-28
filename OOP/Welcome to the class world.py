@@ -34,7 +34,7 @@ class Matrix:
         self.size = size
         
     def __getitem__(self, index):
-        return self.Matrix[index]
+        return self.arr[index]
     
     def sumMatrix(self, otherArr):
         if isinstance(otherArr, Matrix):
@@ -46,13 +46,29 @@ class Matrix:
                     temp.append(value)
                  res.append(temp) 
         return res
+    
+    def multiMatrix(self, multiplier):
+        if isinstance(multiplier, (int, float)):
+             res = []
+             for i in range(len(self.arr)):
+                 temp = []
+                 for j in range(len(self.arr)):
+                    value = self[i][j] * multiplier
+                    temp.append(value)
+                 res.append(temp) 
+        return res
         
 arr1 = [[93, 85, 96], [46, 1, 79], [35, 16, 85]]
 arr2 = [[33, 20, 80], [75, 76, 46], [56, 44, 4]]
 
-a = Matrix(arr1, 3)
-b = Matrix(arr2, 3)
-print(a[2])
+a = Matrix(arr1, len(arr1))
+b = Matrix(arr2, len(arr2))
+c = a.sumMatrix(b)
+d = a.multiMatrix(4)
+print(a.arr)
+print(b.arr)
+print(c)
+print(d)
 
 
 samsung = Phone(88005553535, 'Samsung', 412)
