@@ -1,6 +1,3 @@
-import random 
-import math
-
 class Phone:
     def __init__(self, number, model, weight):
         self.number = number
@@ -58,19 +55,19 @@ b = Matrix(arr2, 3)
 print(a[2])
 
 
-# samsung = Phone(88005553535, 'Samsung', 412)
-# apple = Phone(77009379992, 'Apple', 200)
-# nokia = Phone(797822211166, 'Nokia', 600)
-# print(samsung.number, samsung.model, samsung.weight)
-# print(apple.number, apple.model, apple.weight)
-# print(nokia.number, nokia.model, nokia.weight)
-# samsung.getNumber
-# samsung.receiveCall('Кельфаен', '%anyGeorgiaNumber%')
-# samsung.sendMessage('8800111111, 6600656666, 770055555')
+samsung = Phone(88005553535, 'Samsung', 412)
+apple = Phone(77009379992, 'Apple', 200)
+nokia = Phone(797822211166, 'Nokia', 600)
+print(samsung.number, samsung.model, samsung.weight)
+print(apple.number, apple.model, apple.weight)
+print(nokia.number, nokia.model, nokia.weight)
+samsung.getNumber
+samsung.receiveCall('Кельфаен', '%anyGeorgiaNumber%')
+samsung.sendMessage('8800111111, 6600656666, 770055555')
 
-# oleg = Person1('Олег', 17)
-# gleb = Person2()
-# gleb.fullName = 'Глеб'
-# gleb.age = '19' 
-# oleg.talk1()
-# gleb.talk2()
+oleg = Person1('Олег', 17)
+gleb = Person2()
+gleb.fullName = 'Глеб'
+gleb.age = '19' 
+oleg.talk1()
+gleb.talk2()
