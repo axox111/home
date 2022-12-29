@@ -5,7 +5,7 @@ class Reader:
         self.fullName = fullName
         self.ticketNumber = ticketNumber
         self.faculty = faculty
-        self.bitchDate = birthDate
+        self.birthDate = birthDate
         self.phoneNumber = phoneNumber  
     
     def takeBook(self, takenBooks):
