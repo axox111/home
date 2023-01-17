@@ -74,7 +74,6 @@ class Veterinarian:
         for i in Animal:
             public = i.__class__.__name__
             print(public)
-    #     # print(f"Сегодня к ветеренару на приём попадут {args.__class__.__name__}")
 
 vet = Veterinarian()
 dog1 = Dog('Мясо', 'Двор', 'Всегда рад видеть тебя!')
@@ -87,3 +86,4 @@ horse1 = Horse('Сахарок', 'Стойло', 'цок. цок. цок. цок
 horse2 = Horse('Сено', 'Пастбище', 'цокцокцокцокцок')
 horse3 = Horse('Рожь', 'Поле', 'цок! цок-цок! цок-цок-цок-цок-цок-цок')
 vet.main(dog1, cat1, horse1)
+vet.treatAnimal(dog1)
