@@ -42,7 +42,7 @@ class Cat(Animal):
         print("{__class__.__name__} делает мав-мав")
     
     def eat(self):
-        print(f"{__class__.__name__} ест {self.food}")
+        print(f"{__class__.__name__} ест {self.food}") 
     
     
 class Horse(Animal):
