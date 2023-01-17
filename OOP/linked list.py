@@ -42,9 +42,6 @@ class LinkedList:
                 prev = prev.next     
             else:
                 self.addToEnd(value)
-
-        # else:
-        #     self.addToEnd(value)
             
        
     def public(self):
@@ -57,20 +54,45 @@ class LinkedList:
         print(pub)
         
     def checkElem(self, value):
-        islast = self.head
+        islast = self.head.value
         i = 0
-        while islast.value:
-            if islast.value.value == value.value:
-                print(f"Значение {value.value} содержится под индексом {i}")
+        while islast:
+            if value == islast:
+                print(f'Элемент {value.value} имеет индекс {i}')
                 break
-            else:  
-                i += 1
+            else:
                 islast = islast.next
-        else:
-            print(f"Значение {value.value} отсутствует в списке")
+                i += 1
+            # while islast:
+        #     if isl
             
-    def removeElem(self, value):
-        pass
+        #     if islast.value.value == value.value:
+        #         print(f"Значение {value.value} содержится под индексом {i}")
+        #         break
+        #     else:  
+        #         i += 1
+        #         islast = islast.next
+        # else:
+        #     print(f"Значение {value.value} отсутствует в списке")
+
+            
+    def removeElem(self, pos):
+        node = self.head
+        if pos == 0:
+            self.head = node.next
+            node = None
+        else:
+            i = 1
+            while node.next:
+                prev_node = node
+                node = node.next
+                if pos == i:
+                    prev_node.next = node.next
+                    node = None
+                    break
+                else:
+                    i += 1
+                    prev_node = node.next
             
 
 a = Node(12)
@@ -78,11 +100,18 @@ b = Node(56)
 c = Node(87)
 d = Node(109)
 e = Node(333)
+g = Node(333)
 ll = LinkedList()
 ll.addToEnd(a)
 ll.addToEnd(b)
 ll.addToEnd(c)
 ll.addToEnd(d)
-ll.insert(e, 7)
+print('список')
 ll.public()
-ll.checkElem(e)
+ll.insert(e, 7)
+print('после вставки')
+ll.public()
+ll.removeElem(6)
+print('после удаления')
+ll.public()
+ll.checkElem(a)
