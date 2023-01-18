@@ -2,23 +2,29 @@ class Stack:
 
     
     def __init__(self):
-        self.list = []
+        self.values = []
+        self.size = -1
         
     def push(self, val):
-        self.list.append(val)
-    
-    def pop(self):
-        self.list.pop()
+        self.values += [val]
+        self.size += 1
         
-
+    def pop(self):
+        self.values = self.values[0:self.size]
+        self.size -= 1
+        
+        
 class Queue:
     
     
     def __init__(self):
-        self.list = []
-        
+        self.values = []
+        self.size = -1
+
     def push(self, val):
-        self.list.append(val)
-    
+       self.values = [val] + self.values
+       self.size += 1
+       
     def pop(self):
-        self.list.pop(0)
+        self.values = self.values[0:self.size]
+        self.size -= 1

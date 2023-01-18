@@ -43,15 +43,12 @@ class LinkedList:
             else:
                 self.addToEnd(value)
             
-       
     def public(self):
         islast = self.head
-        pub = []
         while islast.next:
-            pub.append(islast.value.value)
+            print(islast.value.value, end=", ")
             islast = islast.next
-        pub.append(islast.value.value)
-        print(pub)
+        print(islast.value.value)
         
     def checkElem(self, value):
         islast = self.head.value
@@ -63,19 +60,7 @@ class LinkedList:
             else:
                 islast = islast.next
                 i += 1
-            # while islast:
-        #     if isl
-            
-        #     if islast.value.value == value.value:
-        #         print(f"Значение {value.value} содержится под индексом {i}")
-        #         break
-        #     else:  
-        #         i += 1
-        #         islast = islast.next
-        # else:
-        #     print(f"Значение {value.value} отсутствует в списке")
-
-            
+                
     def removeElem(self, pos):
         node = self.head
         if pos == 0:
@@ -111,7 +96,7 @@ ll.public()
 ll.insert(e, 7)
 print('после вставки')
 ll.public()
-ll.removeElem(6)
+ll.removeElem(2)
 print('после удаления')
 ll.public()
 ll.checkElem(a)
