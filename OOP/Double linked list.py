@@ -40,7 +40,6 @@ class DoubleLinkedList:
                 node = node.next
                 i += 1
         return i
-
         
     def addToEnd(self, value):
         new_node = Node(value)
@@ -91,10 +90,7 @@ class DoubleLinkedList:
                 i += 1
             remNode.prev.next = remNode.next
             remNode.next.prev = remNode.prev
-            
-    
-            
-        
+                  
 dll = DoubleLinkedList()
 a = Node(7)
 b = Node(12)
